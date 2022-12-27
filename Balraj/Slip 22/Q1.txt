@@ -1,0 +1,55 @@
+import java.io.*;
+class employee
+{
+int id, sal;
+String name,dept;
+static int count=0;
+employee()
+{
+}
+employee(int id,String name,String dept,int sal)
+{
+this.id=id;
+this.name=name;
+this.dept=dept;
+this.sal=sal;
+count++;
+}
+static void displaycount()
+{
+System.out.println("object:-"+count+"\tcreated");
+}
+public void display()
+{
+System.out.println("id="+id);
+System.out.println("name="+name);
+System.out.println("department="+dept);
+System.out.println("salary="+sal);
+System.out.println("__________");
+}
+}
+public class A2_p1
+{
+public static void main(String a[] )throws IOException
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("how many records ?");
+int n=Integer.parseInt(br.readLine());
+employee e[]=new employee[n];
+for(int i=0;i<n;i++)
+{
+System.out.println("enter id=");
+int id=Integer.parseInt(br.readLine());
+System.out.println("enter name=");
+String na=br.readLine();
+System.out.println("enter department=");
+String dept=br.readLine();
+System.out.println("enter salary=");
+int sal=Integer.parseInt(br.readLine());
+e[i]=new employee(id,na,dept,sal);
+e[i].displaycount();
+}
+for(int i=0;i<n;i++)
+e[i].display();
+}
+}

@@ -1,0 +1,63 @@
+{
+public UsernameException(String msg)
+{
+super(msg);
+}
+}
+
+class PasswordException extends Exception
+{
+public PasswordException(String msg)
+{
+super(msg);
+}
+}
+
+class EmailID
+{
+String username, password;
+EmailID()
+{}
+EmailID(String u, String p)
+{
+username=u;
+password=p;
+}
+void display()
+{
+System.out.println("Login Successful !!!");
+}
+}
+
+public class A4_p3
+{
+public static void main(String[] args) {
+Scanner s = new Scanner(System.in);
+String username, password;
+System.out.print("Enter username :: ");
+username = s.nextLine();
+
+System.out.print("Enter password :: ");
+password = s.nextLine();
+EmailID e=new EmailID(username, password);
+int length = username.length();
+try {
+if(length < 6)
+throw new UsernameException("Username must be greater than 6 characters ???");
+else if(!password.equals("hello"))
+throw new PasswordException("Incorrect password");
+else
+e.display();
+
+}
+catch (UsernameException u) {
+u.printStackTrace();
+}
+catch (PasswordException p) {
+p.printStackTrace();
+}
+finally {
+System.out.println("The finally statement is executed");
+}
+}
+}

@@ -1,0 +1,54 @@
+import java.util.*;
+class CovidPossitiveException extends Exception
+{
+}
+
+class Patient
+{
+String name;
+int age;
+int oxy_level;
+int HRCTreport;
+public Patient(String name,int age,int oxy_level,int HRCTreport)
+{
+this.name=name;
+this.age=age;
+this.oxy_level=oxy_level;
+this.HRCTreport=HRCTreport;
+}
+void display()
+{
+System.out.println("Patient name="+name);
+System.out.println("Patient age="+age);
+System.out.println("Patient Oxygen level="+oxy_level);
+System.out.println("Patient HRCTreport="+HRCTreport);
+}
+}
+
+public class A4_p1
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("patient name=");
+String name=sc.next();
+System.out.println("patient age=");
+int age=sc.nextInt();
+System.out.println("patient oxy_level=");
+int oxy_level=sc.nextInt();
+System.out.println("patient HRCTperort=");
+int HRCTreport=sc.nextInt();
+Patient p=new Patient(name,age,oxy_level,HRCTreport);
+try
+{
+if(oxy_level<95 && HRCTreport>10)
+throw new CovidPossitiveException();
+p.display();
+}
+catch(CovidPossitiveException e)
+{
+System.out.println("patient is covid positive and need not to be hospitalize");
+//System.out.println(e);
+}
+}
+}

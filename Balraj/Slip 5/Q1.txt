@@ -1,0 +1,63 @@
+import java.util.*; 
+class continent
+{
+String c;
+public continent(String c)
+{
+this.c=c;
+}
+public void display()
+{
+System.out.println("continent="+c);
+}
+}
+ 
+class country extends continent
+{
+String co;
+public country( String c,String co)
+{
+super(c);
+this.co=co;
+}
+public void display()
+{
+super.display();
+System.out.println("country="+co);
+}
+}
+
+ class state extends country
+{
+String s,p;
+public state(String c,String co ,String s,String p)
+{
+super(c,co);
+this.s=s;
+this.p=p;
+}
+public void display()
+{
+super.display();
+System.out.println("state="+s+"\nplace="+p);
+}
+}
+
+public class A3_p1
+{
+public static void main (String args[])
+{
+Scanner sc= new Scanner(System.in);
+System.out.println(" enter continent name:");
+String c=sc.next();
+System.out.println(" enter country name:");
+String co=sc.next();
+System.out.println(" enter state name:");
+String s=sc.next();
+System.out.println(" enter place name:");
+String p=sc.next();
+state a=new state(c,co,s,p);
+System.out.println("Information to be display:");
+a.display();
+}
+}

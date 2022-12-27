@@ -1,0 +1,77 @@
+import java.util.*;
+class cplayer
+{
+String name;
+int NOI,NTNO,TR;
+float bavg;
+cplayer()
+{}
+cplayer (String n,int NI,int NO,int tr)
+{
+name=n;
+NOI=NI;
+NTNO=NO;
+TR=tr;
+}
+void setBavg(float b)
+{
+bavg=b;
+}
+static void avg(cplayer c[],int n)
+{
+for(int i=0;i<n;i++)
+{
+float t=(float)c[i].TR/c[i].NOI;
+c[i].setBavg(t);
+}
+}
+void display()
+{
+System.out.println("Name="+name+"\n no of inning="+NOI+"\n total run="+TR+"\n batting avrage="+bavg);
+}
+static void sort(cplayer c[],int n)
+{
+for(int i=0;i<n;i++)
+{
+for(int j=i+1;j<n;j++)
+{
+if(c[i].bavg<c[j].bavg)
+{
+cplayer t=c[i];
+c[i]=c[j];
+c[j]=t;
+}
+}
+}
+for(int i=0;i<n;i++)
+{
+c[i].display();
+}
+}
+}
+public class A2_p4
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter how many records");
+int n=sc.nextInt();
+cplayer c[]=new cplayer[n];
+for(int i=0;i<n;i++)
+{
+System.out.println("enter name=");
+String no=sc.next();
+System.out.println("enter number of innings=");
+int NI=sc.nextInt();
+System.out.println("enter number of time not out=");
+int NT=sc.nextInt();
+System.out.println("enter total runs=");
+int r=sc.nextInt();
+c[i]=new cplayer(no,NI,NT,r);
+}
+cplayer.avg(c,n);
+System.out.println("player information=");
+for(int i=0;i<n;i++)
+{
+c[i].display();
+System.out.println("player informatoin of the basic of batting avg:");
