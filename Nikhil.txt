@@ -1,0 +1,243 @@
+SU-Pritish_Marathe
+7:31 PM
+ping website name for checking if it points to our server
+
+
+SU-Pritish_Marathe
+5:03 PM
+I understand your situation. Our senior admins are working on the same, I assure you once it is fixed you won't be facing the same issue again. Please be rest assured.
+
+
+SU-Pritish_Marathe
+5:20 PM
+df -h disk space
+lscpu
+
+
+SU-Pritish_Marathe
+6:31 PM
+csf -g IP to check
+csf -dr IP to remove temp
+csf -a Ip to remove permanently
+
+
+SU-Pritish_Marathe
+6:22 PM
+killall -u username in server for killing all processes
+
+
+SU-Pritish_Marathe
+11:42 PM
+Sql database backup ---
+go to user terminal
+then to /backup
+find the backup with name
+copy it somewhere else
+change its ownership
+gunzip it
+
+
+SU-Pritish_Marathe
+10:54 PM
+ps -aux | grep username
+killall -u username
+
+
+SU-Pritish_Marathe
+7:40 PM
+du - sch * for checking the memory used by files n folders
+
+
+SU-Pritish_Marathe
+4:31 PM
+As we can see that your domain is marked as deceptive by google due to some malicious content on your website, so you can refer to the below article to remove that warning.
+https://www.milesweb.in/hosting-faqs/remove-deceptive-site-ahead-warning/
+
+
+SU-Pritish_Marathe
+1:17 PM
+I can see that the domain " asparkcompany.com " is not pointing to our server
+Kindly update the below A record and nameservers at your domain registrar's end (from where you purchased the domain):
+A record : 103.102.234.253
+Nameservers :
+ns100.herosite.pro
+ns101.herosite.pro
+
+
+SU-Pritish_Marathe
+1:27 PM
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+AddHandler application/x-httpd-ea-php74___lsphp .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
+
+
+SU-Pritish_Marathe
+2:02 PM
+cat /var/log/exim_mainlog | grep username
+For checking mail logs
+
+
+SU-Pritish_Marathe
+4:59 PM
+iptables -D STOPFORUMSPAM 2113
+
+
+SU-Pritish_Marathe
+11:56 PM
+Order deny, allow
+Deny from all
+Allow from 103.76.228.222
+
+
+SU-Pritish_Marathe
+4:27 PM
+As I checked, the Application pool of the domain was stuck due to multiple connections hitting, so the resources allocated for your application pool are reaching their limit and causing the application pool to get stuck.
+We have to restart the application in such a case to continue the normal working of your domain.
+The website is working fine now; please check.
+
+
+SU-Pritish_Marathe
+10:16 PM
+h5EEgR@uu!Ei
+103.108.220.68
+
+
+SU-Pritish_Marathe
+10:20 PM
+Clipboard - April 22, 2023 10:21 PM  
+
+
+
+SU-Pritish_Marathe
+10:59 AM
+You need to clean the site by removing the infected files.
+
+You can scan the files which you have uploaded in the file manager on your PC and then reupload the scanned files. Check for any malicious files, and codes and remove them with the help of your developer if you are not sure which codes are malicious. Once everything is cleaned you can reupload the files and submit a request to Google. They will check and if everything is fine they will approve the site and your site will be visible to all again.
+
+Please refer to the article which provides all steps in detail:
+https://www.milesweb.in/hosting-faqs/remove-deceptive-site-ahead-warning/
+
+Once you have scanned the files and removed all malicious codes and files, submit your request to Google webmaster tools for verification.
+Here is the article for reference: https://www.milesweb.in/hosting-faqs/submit-your-website-url-to-google/
+
+
+SU-Pritish_Marathe
+5:27 PM
+Mod Security for your domains on the server is a security package that provides better protection for your domains.
+When you make modifications to the domain, your IP address is triggered in the mod security wall, causing an issue.
+To fix this, temporarily disable the mod security and then re-enable it once the changes are complete.
+https://prnt.sc/ScBc199_Jn6T
+Please enable Mod protection once the changes have been completed, as it is an additional protection for your domain that protects you from attacks.
+
+
+SU-Pritish_Marathe
+4:47 PM
+Unfortunately, we do not provide any development regarding support as of now. If you have any requirements from the server end, please ask us.
+
+
+SU-Pritish_Marathe
+6:59 PM
+VPS login details-
+103.108.220.68
+20A*9b^@!qXcNF9w
+
+
+SU-Pritish_Marathe
+9:21 PM
+AI research co-op fellow at Intel Labs
+machine learning intern at cyber intelligence firm Blackbird.AI
+
+
+SU-Pritish_Marathe
+7:11 PM
+qL62!50xi
+
+
+SU-Pritish_Marathe
+3:45 PM
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.tint2ppf.com/$1 [R,L]
+
+
+SU-Pritish_Marathe
+5:01 PM
+#MW6349302
+#MW2700304
+
+
+SU-Pritish_Marathe
+6:00 PM
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+
+SU-Pritish_Marathe
+7:27 PM
+We can tail apache logs with our IP also to see how the domain is reacting with our IP
+
+
+SU-Pritish_Marathe
+6:15 PM
+netstat -tulpn | grep LISTEN
+
+
+SU-Pritish_Marathe
+9:19 PM
+#MW3495944
+
+
+SU-Pritish_Marathe
+10:09 PM
+#MW0224287
+
+
+SU-Pritish_Marathe
+3:59 PM
+To confirm if the python application is running on the same port.
+netstat -nap | grep port
+and then
+ll /proc/2220137<- process ID
+
+
+SU-Pritish_Marathe
+5:07 PM
+os.getenv('SECRET_KEY')
+
+
+SU-Pritish_Marathe
+6:30 PM
+screen to start screen
+screen -ls to list screen
+screen -r to run screen
+crtl+a+d to detach screen without stopping process
+crtl+d to terminate and exit the screen
+
+
+SU-Pritish_Marathe
+5:40 PM
+Clipboard - July 7, 2023 5:40 PM  
+
+
+
+SU-Pritish_Marathe
+11:53 PM
+#MW9090909
+
+
+SU-Pritish_Marathe
+10:57 AM
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^example\.com [NC]
+RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301]
+www.example.com
+Example Domain
+
+
+SU-Pritish_Marathe
+4:42 PM
+#MW6061779
